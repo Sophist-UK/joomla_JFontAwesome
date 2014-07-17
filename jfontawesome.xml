@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>System - JFontAwesome</name>
+    <author>Extly.com</author>
+    <creationDate>August 2012</creationDate>
+    <copyright>(C) 2007 - 2012 Prieco, S.A. All rights reserved.</copyright>
+    <license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+    <authorEmail>support@extly.com</authorEmail>
+    <authorUrl>http://www.extly.com</authorUrl>
+    <version>2.0.0</version>
+    <description>
+	<![CDATA[
+<div class="row-fluid">
+	<div class="span9">
+		<p class="lead">This system plugin for Joomla integrates Font Awesome in the Front and Backend.</p>
+		<p>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="span4">
+<h4><i class="fa fa-flag"></i> One Font, 439 Icons</h4>	
+	</div>
+	<div class="span4">
+<h4><i class="fa fa-ban"></i> No JavaScript Required</h4>	
+	</div>
+	<div class="span4">
+<h4><i class="fa fa-arrows-alt"></i> Infinite Scalability</h4>	
+	</div>	
+</div>
+<div class="row">
+	<div class="span4">
+<h4><i class="fa fa-microphone"></i> Free, as in Speech</h4>	
+	</div>
+	<div class="span4">
+<h4><i class="fa fa-pencil"></i> CSS Control</h4>	
+	</div>
+	<div class="span4">
+<h4><i class="fa fa-eye"></i> Perfect on Retina Displays</h4>	
+	</div>	
+</div>
+<div class="row">
+	<div class="span4">
+<h4><i class="fa fa-gamepad"></i> Plays Well with Others</h4>	
+	</div>
+	<div class="span4">
+<h4><i class="fa fa-desktop"></i> Desktop Friendly</h4>
+	</div>
+	<div class="span4">
+<h4><i class="fa fa-search"></i> Screen Reader Compatible</h4>
+	</div>	
+</div>
+    
+<h2>License</h2>
+<p>The full details of how Font Awesome is licensed: <a href="http://fortawesome.github.io/Font-Awesome/license/" target="_blank">http://fortawesome.github.io/Font-Awesome/license/</p> 
+]]>
+    </description>
+    <files>
+        <filename plugin="jfontawesome">jfontawesome.php</filename>
+        <filename>index.html</filename>
+    </files>
+    
+	<!-- Media files -->
+	<media destination="plg_JFontAwesome" folder="media">
+		<folder>font-awesome-3</folder>
+		<folder>font-awesome-4</folder>
+		<filename>index.html</filename>
+	</media>
+	    
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_jfontawesome.ini</language>
+        <language tag="en-GB">en-GB.plg_system_jfontawesome.sys.ini</language>
+    </languages>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field type="spacer" default="PLG_SYSTEM_JFONTAWE_HEADER1" />
+                
+                <field name="version" type="radio" class="btn-group"  default="4" label="PLG_SYSTEM_JFONTAWE_VERSION" description="PLG_SYSTEM_JFONTAWE_VERSION">
+                    <option value="3">3</option>
+                    <option value="4">4</option>                    
+                </field>                
+
+                <field name="embedjfontawe" type="list" default="1" label="PLG_SYSTEM_JFONTAWE_EMBED_JFONTAWE" description="PLG_SYSTEM_JFONTAWE_EMBED_JFONTAWE_DESC">
+                    <option value="0">PLG_SYSTEM_JFONTAWE_NO</option>
+                    <option value="1">PLG_SYSTEM_JFONTAWE_FROM_LOCAL</option>
+                    <option value="2">PLG_SYSTEM_JFONTAWE_FROM_CUSTOM_CDN</option>
+                </field>
+                <field name="jfontawecdnpath" size="30" type="text" default="" label="PLG_SYSTEM_JFONTAWE_JFONTAWE_CUSTOM" description="PLG_SYSTEM_JFONTAWE_JFONTAWE_CUSTOM_DESC"  />
+            </fieldset>
+            
+            <fieldset name="advanced">				
+            
+                <field name="minimified" type="radio" class="btn-group"  default="1" label="PLG_SYSTEM_JFONTAWE_MINIMIFIED" description="PLG_SYSTEM_JFONTAWE_MINIMIFIED_DESC">
+                    <option value="1">JYES</option>                    
+                    <option value="0">JNO</option>
+                </field>
+                                
+                <field name="activateatbackend" type="radio" class="btn-group"  default="1" label="PLG_SYSTEM_JFONTAWE_ACTIVATE_AT_BACKEND" description="PLG_SYSTEM_JFONTAWE_ACTIVATE_AT_BACKEND_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+			
+        </fields>
+    </config>
+</extension>
